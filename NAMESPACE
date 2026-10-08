@@ -1,0 +1,2 @@
+export(openpbr_version)
+useDynLib(openpbr, .registration = TRUE, .fixes = "C_")

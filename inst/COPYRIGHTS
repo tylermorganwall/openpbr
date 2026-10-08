@@ -1,0 +1,12 @@
+Files: include/openpbr/*, UPSTREAM-README.md
+Copyright: 2026 Adobe
+License: Apache License, Version 2.0 (Apache-2.0.txt)
+URL: https://github.com/adobe/openpbr-bsdf
+Revision: c91aad1d1ce1693e803f039d7c92c2965c4eb013
+OpenPBR model version: 1.1.1
+The fuzz implementation retains its upstream attribution to Tizian Zeltner,
+Brent Burley, and Matt Jen-Yuan Chiang's Apache-2.0 LTC sheen implementation.
+
+Files: R package metadata, documentation, tests, R/version.R, and src/*
+Copyright: 2026 Tyler Morgan-Wall
+License: Apache License, Version 2.0

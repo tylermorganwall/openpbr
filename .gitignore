@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+*.Rcheck
+*.tar.gz
+*.o
+*.so
+*.dll
+*.dylib
