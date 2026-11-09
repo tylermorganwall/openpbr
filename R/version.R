@@ -1,7 +1,7 @@
 #' OpenPBR Material Model Version
 #'
-#' Exercise the installed native OpenPBR interface with a diffuse BSDF evaluation
-#' and return the material model version supported by the bundled headers.
+#' Return the material model version supported by the bundled OpenPBR headers
+#' and verify the native interface with a diffuse scattering evaluation.
 #'
 #' @md
 #' @return A character scalar containing the OpenPBR material model version.
@@ -9,7 +9,8 @@
 #'   `utils::packageVersion("openpbr")`.
 #' @export
 #' @examples
-#' openpbr_version()
-openpbr_version <- function() {
+#' # Verify the bundled model version and its diffuse scattering evaluation.
+#' stopifnot(identical(openpbr_version(), "1.1.1"))
+openpbr_version = function() {
   .Call(C_openpbr_version)
 }

@@ -8,21 +8,19 @@ Authors@R: c(
         comment = c(ORCID = "0000-0002-3131-3814")),
     person("Adobe", role = c("aut", "cph"),
         comment = "OpenPBR BSDF implementation"))
-Description: Provides the header-only 'OpenPBR' surface shading implementation
-    from 'Adobe' for use by other R packages. Includes layered diffuse, metallic,
-    dielectric, coat, fuzz, transmission, and subsurface material controls,
-    bidirectional scattering evaluation, and importance sampling. Packages using
-    these headers should list both 'openpbr' and 'glmheaders' in 'LinkingTo'.
-    A small compiled interface verifies the headers and reports the supported
-    material model version. The shading model is described at
-    <https://academysoftwarefoundation.github.io/OpenPBR/>.
+Description: Provides the header-only 'C++' implementation of the 'OpenPBR'
+    surface shading model for physically based rendering
+    <https://academysoftwarefoundation.github.io/OpenPBR/>. Combines diffuse
+    reflection, metals, transparent dielectrics, coatings, fuzz, and
+    subsurface scattering in a layered material model. Includes scattering
+    evaluation and importance sampling.
 License: Apache License (== 2.0)
 Copyright: file inst/COPYRIGHTS
-URL: https://github.com/adobe/openpbr-bsdf,
-    https://academysoftwarefoundation.github.io/OpenPBR/
+URL: https://github.com/tylermorganwall/openpbr
 Depends: R (>= 4.3.0)
 LinkingTo: glmheaders (>= 1.0.1-1)
-Suggests: Rcpp, glmheaders (>= 1.0.1-1)
+Suggests: glmheaders (>= 1.0.1-1)
 Encoding: UTF-8
 NeedsCompilation: yes
-Remotes: tylermorganwall/glmheaders
+BugReports: https://github.com/tylermorganwall/openpbr/issues
+Config/roxygen2/version: 8.0.0

@@ -17,7 +17,8 @@ and volume integration are supplied by the consuming renderer.
 
 Headers and embedded lookup tables are installed under
 \code{system.file("include", package = "openpbr")}. See the installed
-\file{UPSTREAM.md} and \file{UPSTREAM-README.md} for provenance and API details.
+\file{COPYRIGHTS} for the pinned upstream revision and the upstream repository
+below for API details.
 }
 \references{
 \url{https://github.com/adobe/openpbr-bsdf}

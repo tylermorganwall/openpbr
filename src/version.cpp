@@ -31,7 +31,7 @@ extern "C" SEXP openpbr_version() {
     }
   }
   // The pinned upstream has no model-version macro; keep this synchronized with
-  // inst/UPSTREAM.md when updating the bundled implementation.
+  // inst/COPYRIGHTS when updating the bundled implementation.
   return Rf_mkString("1.1.1");
 }
 

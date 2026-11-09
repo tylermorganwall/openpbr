@@ -36,11 +36,17 @@ flags or linkage to this package's verification DLL are needed. To isolate the u
 GLM first, then include `openpbr/openpbr.h` inside a namespace. Configuration
 macros must be set before including OpenPBR. Upstream settings remain unchanged.
 
+Keep R's standard `-DNDEBUG` compilation flag to disable upstream assertions
+that could otherwise terminate the R process. Custom build systems must also
+define `NDEBUG`.
+
 For standalone tools, locate headers with
 `system.file("include", package = "openpbr")` and the corresponding glmheaders
 directory. Code compiled during tests or examples should also declare its header
 dependencies in Suggests, as LinkingTo is an installation-time dependency.
 
-Provenance, licenses, and upstream documentation are installed as UPSTREAM.md,
-Apache-2.0.txt, COPYRIGHTS, and UPSTREAM-README.md. Compile-and-run tests exercise the
-installed headers, BSDF evaluation, sampling, and embedded lookup tables.
+The pinned upstream revision and copyright attributions are recorded in
+`COPYRIGHTS`. API documentation is available in the
+[upstream repository](https://github.com/adobe/openpbr-bsdf).
+Compile-and-run tests use R's native interface to exercise the installed
+headers, BSDF evaluation, sampling, and embedded lookup tables.
