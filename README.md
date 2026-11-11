@@ -12,7 +12,7 @@ openpbr::openpbr_version()
 
 This is the material model version; `packageVersion("openpbr")` reports the R
 package version. Package versions use `x.y.z-n`, with `x.y.z` taken from upstream:
-the current version is `1.1.1-2`, where `2` is the packaging revision. Increment
+the current version is `1.1.1-0`, where `0` is the packaging revision. Increment
 that suffix for packaging changes that retain the same upstream version.
 The function checks an index-matched diffuse evaluation against
 the expected Lambertian response. Renderers supply geometry, lighting, and
@@ -21,7 +21,7 @@ transport; this package does not provide an R shader constructor.
 Install glmheaders first, then openpbr. A consuming package should declare both:
 
 ```
-LinkingTo: openpbr (>= 1.1.1-1), glmheaders (>= 1.0.1-1)
+LinkingTo: openpbr (>= 1.1.1-0), glmheaders (>= 1.0.1-1)
 ```
 
 The C++ entry point requires GLM to be included first:

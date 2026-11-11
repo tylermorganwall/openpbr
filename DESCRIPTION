@@ -1,7 +1,7 @@
 Package: openpbr
 Type: Package
 Title: 'OpenPBR' Surface Shading Headers
-Version: 1.1.1-2
+Version: 1.1.1-0
 Authors@R: c(
     person("Tyler", "Morgan-Wall", email = "tylermw@gmail.com",
         role = c("aut", "cre"),
