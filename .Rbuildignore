@@ -6,3 +6,12 @@
 
 ^air\.toml$
 ^.*\.Rcheck($|/)
+
+^dev$
+^for_codex$
+^README_files$
+^[^/]+[.]tar[.](gz|bz2|xz)$
+^.*[.]Rcheck($|/)
+(^|/)[.]github$
+^[.]vscode$
+^tools$
