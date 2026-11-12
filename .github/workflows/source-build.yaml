@@ -43,6 +43,21 @@ jobs:
           path: ${{ runner.temp }}/source-output/*
           if-no-files-found: error
           retention-days: 30
+      - name: Download the saved package for verification
+        uses: actions/download-artifact@v4
+        with:
+          name: r-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/source-download
+      - name: Verify the downloaded tarball and metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 "$GITHUB_WORKSPACE/.github/scripts/build-source.py" \
+            "$GITHUB_WORKSPACE" "$RUNNER_TEMP/source-download" "$RUNNER_TEMP/source-verified"
+          cmp "$RUNNER_TEMP/source-output/source-build.json" "$RUNNER_TEMP/source-verified/source-build.json"
+          cmp "$RUNNER_TEMP/source-output/source-build.json" "$RUNNER_TEMP/source-download/source-build.json"
+          cd "$RUNNER_TEMP/source-download"
+          sha256sum --check --strict -- *.sha256
       - name: Link the build artifact
         env:
           ARTIFACT_URL: ${{ steps.artifact.outputs.artifact-url }}
